@@ -32,7 +32,7 @@ namespace TakkalaDigitalShopping
             {
                 endpoints.MapGet("/", async context =>
                 {
-                    await context.Response.WriteAsync("Hello Kitty!");
+                    await context.Response.WriteAsync("Hello Big Kitty!");
                 });
             });
         }
