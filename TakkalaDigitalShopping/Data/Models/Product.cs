@@ -11,7 +11,7 @@ namespace TakkalaDigitalShopping.Data.Models
         public string ProductName { get; set; }
         public Decimal Price { get; set; }
         public string TotalDescription { get; set; }
-        public string  ImageURL { get; set; }
+        public string  ImageAddress { get; set; }
         public string color { get; set; }
         public int inStock { get; set; }
         public string IntroductionDate { get; set; }

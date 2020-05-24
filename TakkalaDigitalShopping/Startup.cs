@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using TakkalaDigitalShopping.Data.interfaces;
+using TakkalaDigitalShopping.Data.mocks;
 
 namespace TakkalaDigitalShopping
 {
@@ -16,6 +18,10 @@ namespace TakkalaDigitalShopping
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddTransient<IProductRepository, MockProductRepository>();
+            services.AddTransient<IGroupRepository, MockGroupRepository>();
+            services.AddTransient<ISubGroupRepository, MockSubGroupRepository>();
+            services.AddTransient<IBrandRepository, MockBrandRepository>();
             services.AddMvc();
             services.AddRazorPages().AddRazorRuntimeCompilation();
         }
